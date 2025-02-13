@@ -1,0 +1,110 @@
+\documentclass[12pt, a4paper]{report}
+\setlength{\headheight}{14.5pt}
+\usepackage{thesis}
+% No changes above this
+
+% Include necessary libraries here
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{comment}
+\usepackage{subfig}
+\usepackage{lipsum}  
+\usepackage[tableposition=top]{caption}
+\usepackage[Glenn]{fncychap} % Available options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstr
+% \pagestyle{empty}
+%\renewcommand{\headrulewidth}{0pt} % remove header line
+\usepackage{lipsum}
+\usepackage{hyperref}
+\hypersetup{
+    citecolor= blue,
+    urlcolor= blue,
+}
+
+\newcommand{\dept}{Computer Science and Engineering}
+\newcommand{\department}{Department of Computer Science and Engineering}
+\newcommand{\university}{Premier University, Chittagong}
+
+\newcommand{\chairmanName}{Dr. Shahid Md. Asif Iqbal}
+\newcommand{\chairmanDesignation}{Professor and Chairman}
+
+\newcommand{\supervisorName}{Avisheak Das}
+\newcommand{\supervisorDesignation}{Lecturer}
+
+\newcommand{\firstAuthorName}{Enter Member Name}
+\newcommand{\firstAuthorId}{Enter Member ID}
+\newcommand{\secondAuthorName}{Enter Member Name}
+\newcommand{\secondAuthorId}{Enter Member ID}
+\newcommand{\thirdAuthorName}{Enter Member Name}
+\newcommand{\thirdAuthorId}{Enter Member ID}
+
+\newcommand{\projectTitle}{Insert your project title here}
+
+\begin{document}
+
+\pagenumbering{roman}
+\include{pages/title_page}
+\pagebreak
+
+
+\include{pages/author_declaration}
+\pagebreak
+
+\include{pages/signature}
+\pagebreak
+
+
+\input{pages/dedication}
+\pagebreak
+
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+
+\clearpage 
+\setcounter{figure}{0}
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\clearpage 
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+ 
+
+\clearpage
+\input{pages/abstract}
+
+%\phantomsection
+
+
+% Introduction
+\chapter{Introduction} \label{ch: intro}
+\setcounter{page}{0}
+\pagenumbering{arabic}  
+\input{chapters/introduction}
+
+% Literature Review
+\chapter{Literature Review} \label{ch: reviews}
+\input{chapters/literature_review}
+
+% Proposed Methodology
+\chapter{Methodology}  \label{ch: methodology}
+\input{chapters/methodology}
+
+% Results and Discussion
+\chapter{Experimental Results and Discussion}  \label{ch: results}
+\input{chapters/results}
+
+\chapter{Conclusion and Future Works}  \label{ch: conclusion}
+\input{chapters/conclusion}
+
+% Bibliography
+\clearpage
+\renewcommand\bibname{References}
+\addcontentsline{toc}{chapter}{Bibliography}
+% Comment/uncomment as suits you
+\bibliographystyle{IEEEtran} %% IEEE transaction style
+% \bibliographystyle{acm} %% ACM style
+% \bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}
